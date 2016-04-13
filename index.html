@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>My First React App</title>
+	<script src="https://fb.me/react-15.0.1.js"></script><!--react library is used for defining components -->
+	<script src="https://fb.me/react-dom-15.0.1.js"></script><!--react dom library is used for rendering components to the DOM -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+</head>
+
+<body>
+
+</body>
+
+<script type="text/jsx">
+	// define a react component class 
+		// needs to be instantiated first, then rendered
+		// example: cookie cutter is useless at first, only useful when we place it over the dough and make a cut 
+		// the class here is the cookie cutter, describes the form and function of a component, but it cannot itself be rendered to the dom 
+		// we must first instantiate the class, make a copy of the class, and then render that copy 
+		var HelloWorld = React.createClass({ // React library was used to create the class 
+			render: function() {
+				return <div> Hello World! </div>
+			}
+		}); // the cookie cutter 
+
+	// ask react to render this class 
+		var element = React.createElement(HelloWorld); // the cookie cutout 
+
+	// when we ask react to render this class, we will tell it where to place the 
+	// rendered element in the DOM
+		ReactDOM.render(element, document.body); // ReactDOM library was used to render the instantiated class 
+
+</script>
+
+</html>
